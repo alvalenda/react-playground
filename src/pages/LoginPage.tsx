@@ -1,9 +1,11 @@
+import DashboardCard01 from '@/components/Dashboard/DashboardCard01'
 import { EmotionChart } from '@/components/EmotionChart'
 import { PolarChart } from '@/components/EmotionChart/PolarChart'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { LoginForm } from '@/components/LoginForm'
 import { LoginTitle } from '@/components/LoginTitle'
+import LineChart01 from '@/components/charts/LineChart01'
 import { StyledCard } from '@/components/styles/StyledCard'
 import { ScreenWrapper } from '@/components/styles/StyledScreenWrapper'
 import { useNavigate } from 'react-router-dom'
@@ -24,6 +26,7 @@ export function LoginPage({}: Props) {
         {/* <Header /> */}
         {/* <ChartWrapper> */}
         <EmotionChart record={{ bsi: 45, ham_a: 60, ham_d: 30, k10: 15 }} />
+        <DashboardCard01 />
         {/* <PolarChart /> */}
         {/* </ChartWrapper> */}
 
