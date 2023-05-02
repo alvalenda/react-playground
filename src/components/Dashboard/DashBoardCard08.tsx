@@ -97,14 +97,3 @@ function DashboardCard08() {
 }
 
 export default DashboardCard08
-
-/* 
-
-The error message you're seeing is indicating that the generateLabels function is undefined or not accessible on the labels object.
-
-The generateLabels function is part of the labels object, which is defined by the legend plugin. In your code, you're trying to access it through c.options.plugins.legend.labels.generateLabels(c).
-
-It's possible that the legend plugin isn't registered properly, or that the labels object is missing.
-
-You could try checking that the legend plugin is properly registered, and that the labels object is defined and accessible within it.
-*/
