@@ -1,9 +1,9 @@
 import BarChart from '../charts/BarChart01'
 import {
+  BarChartTitle,
   ChartContainer,
   DashBoardCard,
   DashBoardCardHeader,
-  DashBoardCardTitle,
 } from './styles'
 
 // Import utilities
@@ -43,7 +43,7 @@ function DashboardCard04() {
   return (
     <DashBoardCard>
       <DashBoardCardHeader>
-        <DashBoardCardTitle>Direto vs Indireto</DashBoardCardTitle>
+        <BarChartTitle>Direto vs Indireto</BarChartTitle>
       </DashBoardCardHeader>
 
       <ChartContainer>
