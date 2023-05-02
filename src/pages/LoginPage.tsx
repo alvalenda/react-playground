@@ -24,11 +24,11 @@ export function LoginPage({}: Props) {
     <>
       <ScreenWrapper>
         {/* <Header /> */}
-        {/* <ChartWrapper> */}
-        <EmotionChart record={{ bsi: 45, ham_a: 60, ham_d: 30, k10: 15 }} />
-        <DashboardCard01 />
+        {/* <EmotionChart record={{ bsi: 45, ham_a: 60, ham_d: 30, k10: 15 }} /> */}
+        <ChartWrapper>
+          <DashboardCard01 />
+        </ChartWrapper>
         {/* <PolarChart /> */}
-        {/* </ChartWrapper> */}
 
         {/* <Footer /> */}
       </ScreenWrapper>
