@@ -11,6 +11,7 @@ import {
 import { Chart } from 'chart.js/auto'
 import 'chartjs-adapter-moment'
 import { formatValue } from '@/utils/Utils'
+import { ChartContainer } from '../Dashboard/styles'
 
 Chart.register(
   LineController,
@@ -21,12 +22,6 @@ Chart.register(
   TimeScale,
   Tooltip
 )
-
-interface LineChartProps {
-  data: any
-  width: number
-  height: number
-}
 
 function LineChart02({ data, width, height }: LineChartProps) {
   const canvas = useRef(null)
@@ -221,10 +216,9 @@ function LineChart02({ data, width, height }: LineChartProps) {
           </div>
         </div>
       </div>
-      {/* Chart built with Chart.js 3 */}
-      <div style={{ flexGrow: 1 }}>
+      <ChartContainer>
         <canvas ref={canvas} width={width} height={height}></canvas>
-      </div>
+      </ChartContainer>
     </>
   )
 }
