@@ -1,6 +1,7 @@
 import { hexToRGB } from '../../utils/Utils'
 import LineChart from '../charts/LineChart01'
 import {
+  ChartContainer,
   DashBoardCard,
   DashBoardCardHeader,
   DashBoardCardTitle,
@@ -84,10 +85,9 @@ function DashboardCard02() {
           <LineChartNegativeMoneyTag>-14%</LineChartNegativeMoneyTag>
         </LineChartMoneyContainer>
       </DashBoardCardHeader>
-      {/* Chart built with Chart.js 3 */}
-      <div style={{ flexGrow: 1 }}>
+      <ChartContainer>
         <LineChart data={chartData} width={389} height={128} />
-      </div>
+      </ChartContainer>
     </DashBoardCard>
   )
 }
