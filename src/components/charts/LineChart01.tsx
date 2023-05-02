@@ -22,12 +22,6 @@ Chart.register(
   Tooltip
 )
 
-interface LineChartProps {
-  data: any
-  width: number
-  height: number
-}
-
 function LineChart01({ data, width, height }: LineChartProps) {
   const canvas = useRef<HTMLCanvasElement>(null)
 

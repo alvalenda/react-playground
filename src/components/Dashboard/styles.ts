@@ -25,7 +25,18 @@ export const DashBoardCardHeader = styled.div`
   padding-top: 1.25rem;
 `
 
+export const LineChartAlignedHeader = styled.div`
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  align-items: center;
+  border-bottom-width: 1px;
+`
+
 export const DashBoardCardTitle = styled.h2`
+  color: rgb(30 41 59);
   margin-bottom: 0.5rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -93,4 +104,58 @@ export const DashBoardContainer = styled.div`
   padding-right: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+`
+export const ChartContainer = styled.div`
+  flex-grow: 1;
+`
+
+export const LegendUL = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    all: unset;
+    margin-bottom: 16px;
+
+    button {
+      all: unset;
+      display: inline-flex;
+      align-items: center;
+
+      span.box {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-right: 8px;
+        border-width: 3px;
+        border-color: #ffffff;
+        pointer-events: none;
+      }
+      span.labelContainer {
+        all: unset;
+        display: flex;
+        align-items: center;
+
+        span.value {
+          all: unset;
+          color: #1e293b;
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+          font-weight: 600;
+          margin-right: 8px;
+          pointer-events: none;
+        }
+
+        span.label {
+          all: unset;
+          color: #64748b;
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
 `

@@ -8,6 +8,7 @@ import {
   LineChartMoneyContainer,
   LineChartMoney,
   LineChartMoneyTag,
+  ChartContainer,
 } from './styles'
 
 function DashboardCard03() {
@@ -85,10 +86,10 @@ function DashboardCard03() {
           <LineChartMoneyTag>+49%</LineChartMoneyTag>
         </LineChartMoneyContainer>
       </DashBoardCardHeader>
-      {/* Chart built with Chart.js 3 */}
-      <div style={{ flexGrow: 1 }}>
+
+      <ChartContainer>
         <LineChart data={chartData} width={389} height={128} />
-      </div>
+      </ChartContainer>
     </DashBoardCard>
   )
 }
