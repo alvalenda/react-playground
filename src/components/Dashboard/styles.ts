@@ -6,6 +6,7 @@ export const DashBoardCard = styled.div`
   flex-direction: column;
   border-radius: 0.125rem;
   border-width: 1px;
+  border-color: #e2e8f0;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 2;
@@ -33,6 +34,7 @@ export const LineChartAlignedHeader = styled.div`
   padding-right: 1.25rem;
   align-items: center;
   border-bottom-width: 1px;
+  border-color: #f1f5f9;
 `
 
 export const DashBoardCardTitle = styled.h2`
@@ -41,6 +43,31 @@ export const DashBoardCardTitle = styled.h2`
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 600;
+`
+
+export const BarChartTitle = styled.h2`
+  color: #1e293b;
+  font-weight: 600;
+`
+
+export const BarChartMoney = styled.div`
+  margin-right: 0.5rem;
+  font-size: 1.875rem;
+  color: #1e293b;
+  line-height: 2.25rem;
+  font-weight: 700;
+`
+
+export const PaddingContainer = styled.div`
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+`
+
+export const FlexItemsStartContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
 `
 
 export const LinearChartDescription = styled.p`
