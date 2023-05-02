@@ -1,4 +1,7 @@
 import DashboardCard01 from '@/components/Dashboard/DashboardCard01'
+import DashboardCard02 from '@/components/Dashboard/DashboardCard02'
+import DashboardCard03 from '@/components/Dashboard/DashboardCard03'
+import { DashBoardContainer } from '@/components/Dashboard/styles'
 import { EmotionChart } from '@/components/EmotionChart'
 import { PolarChart } from '@/components/EmotionChart/PolarChart'
 import { Footer } from '@/components/Footer'
@@ -25,9 +28,11 @@ export function LoginPage({}: Props) {
       <ScreenWrapper>
         {/* <Header /> */}
         {/* <EmotionChart record={{ bsi: 45, ham_a: 60, ham_d: 30, k10: 15 }} /> */}
-        <ChartWrapper>
+        <DashBoardContainer>
           <DashboardCard01 />
-        </ChartWrapper>
+          <DashboardCard02 />
+          <DashboardCard03 />
+        </DashBoardContainer>
         {/* <PolarChart /> */}
 
         {/* <Footer /> */}
@@ -37,11 +42,14 @@ export function LoginPage({}: Props) {
 }
 
 const ChartWrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+  /* display: flex;
   justify-content: center;
   place-items: center;
   margin: 12rem auto 0 auto;
   gap: 2rem;
   width: 45rem;
-  height: 8rem;
+  height: 8rem; */
 `
