@@ -90,7 +90,7 @@ function DashboardCard01() {
           <LineChartMoneyTag>+49%</LineChartMoneyTag>
         </LineChartMoneyContainer>
       </DashBoardCardHeader>
-      {/* Chart built with Chart.js 3 */}
+
       <ChartContainer>
         <LineChart data={chartData} width={389} height={128} />
       </ChartContainer>
