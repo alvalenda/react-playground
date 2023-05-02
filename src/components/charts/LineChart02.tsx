@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 import {
-  Chart,
   LineController,
   LineElement,
   Filler,
@@ -9,6 +8,7 @@ import {
   TimeScale,
   Tooltip,
 } from 'chart.js'
+import { Chart } from 'chart.js/auto'
 import 'chartjs-adapter-moment'
 import { formatValue } from '@/utils/Utils'
 
@@ -86,7 +86,8 @@ function LineChart02({ data, width, height }: LineChartProps) {
           },
           tooltip: {
             callbacks: {
-              title: () => '', // Disable tooltip title
+              // @ts-ignore
+              title: () => false, // Disable tooltip title
               label: (context) => formatValue(context.parsed.y),
             },
           },
@@ -165,25 +166,66 @@ function LineChart02({ data, width, height }: LineChartProps) {
   }, [])
 
   return (
-    <React.Fragment>
-      <div className="px-5 py-3">
-        <div className="flex flex-wrap justify-between items-end">
-          <div className="flex items-start">
-            <div className="text-3xl font-bold text-slate-800 mr-2">$1,482</div>
-            <div className="text-sm font-semibold text-white px-1.5 bg-yellow-500 rounded-full">
+    <>
+      <div
+        style={{
+          paddingTop: '0.75rem',
+          paddingBottom: '0.75rem',
+          paddingLeft: '1.25rem',
+          paddingRight: '1.25rem',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'flex-start' }}>
+            <div
+              style={{
+                marginRight: '0.5rem',
+                fontSize: '1.875rem',
+                lineHeight: '2.25rem',
+                fontWeight: '700',
+              }}
+            >
+              R$1,482
+            </div>
+            <div
+              style={{
+                paddingLeft: '0.375rem',
+                paddingRight: '0.375rem',
+                backgroundColor: '#F59E0B',
+                color: '#ffffff',
+                fontSize: '0.875rem',
+                lineHeight: '1.25rem',
+                fontWeight: '600',
+                borderRadius: '9999px',
+              }}
+            >
               -22%
             </div>
           </div>
-          <div className="grow ml-2 mb-1">
-            <ul ref={legend} className="flex flex-wrap justify-end"></ul>
+          <div style={{ marginBottom: '0.25rem', marginLeft: '0.5rem' }}>
+            <ul
+              ref={legend}
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'flex-end',
+              }}
+            ></ul>
           </div>
         </div>
       </div>
       {/* Chart built with Chart.js 3 */}
-      <div className="grow">
+      <div style={{ flexGrow: 1 }}>
         <canvas ref={canvas} width={width} height={height}></canvas>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

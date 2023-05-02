@@ -25,7 +25,18 @@ export const DashBoardCardHeader = styled.div`
   padding-top: 1.25rem;
 `
 
+export const LineChartAlignedHeader = styled.div`
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  align-items: center;
+  border-bottom-width: 1px;
+`
+
 export const DashBoardCardTitle = styled.h2`
+  color: rgb(30 41 59);
   margin-bottom: 0.5rem;
   font-size: 1.125rem;
   line-height: 1.75rem;

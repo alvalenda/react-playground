@@ -1,3 +1,4 @@
+import DashboardCard08 from '@/components/Dashboard/DashBoardCard08'
 import DashboardCard01 from '@/components/Dashboard/DashboardCard01'
 import DashboardCard02 from '@/components/Dashboard/DashboardCard02'
 import DashboardCard03 from '@/components/Dashboard/DashboardCard03'
@@ -32,6 +33,7 @@ export function LoginPage({}: Props) {
           <DashboardCard01 />
           <DashboardCard02 />
           <DashboardCard03 />
+          <DashboardCard08 />
         </DashBoardContainer>
         {/* <PolarChart /> */}
 
