@@ -1,18 +1,16 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import LineChart from '../charts/LineChart01'
 // import Icon from '../../images/icon-01.svg'
 // import EditMenu from '../EditMenu'
-
 // Import utilities
 import { hexToRGB } from '../../utils/Utils'
 import {
-  DashBoarCardMoneyContainer,
+  LineChartMoneyContainer,
   DashBoardCard,
-  DashBoardCardDescription,
+  LinearChartDescription,
   DashBoardCardHeader,
-  DashBoardCardMoney,
-  DashBoardCardMoneyTag,
+  LineChartMoney,
+  LineChartMoneyTag,
   DashBoardCardTitle,
 } from './styles'
 
@@ -83,20 +81,18 @@ function DashboardCard01() {
   return (
     <DashBoardCard>
       <DashBoardCardHeader>
-        <DashBoardCardTitle>Hyperlocal Plus</DashBoardCardTitle>
-        <DashBoardCardDescription>Vendas</DashBoardCardDescription>
+        <DashBoardCardTitle>HyperLocal Plus</DashBoardCardTitle>
+        <LinearChartDescription>Vendas</LinearChartDescription>
 
-        <DashBoarCardMoneyContainer>
-          <DashBoardCardMoney>R$ 24,780</DashBoardCardMoney>
-          <DashBoardCardMoneyTag>+49%</DashBoardCardMoneyTag>
-        </DashBoarCardMoneyContainer>
+        <LineChartMoneyContainer>
+          <LineChartMoney>R$24,780</LineChartMoney>
+          <LineChartMoneyTag>+49%</LineChartMoneyTag>
+        </LineChartMoneyContainer>
       </DashBoardCardHeader>
       {/* Chart built with Chart.js 3 */}
-      <div className="grow">
-        {/* Change the height attribute to adjust the chart height */}
+      <div style={{ flexGrow: 1 }}>
         <LineChart data={chartData} width={389} height={128} />
       </div>
-      {/* </div> */}
     </DashBoardCard>
   )
 }
