@@ -9,6 +9,7 @@ export const DashBoardCard = styled.div`
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 2;
+  width: fit-content;
 
   @media (min-width: 640px) {
     grid-column: span 6 / span 6;
@@ -31,7 +32,7 @@ export const DashBoardCardTitle = styled.h2`
   font-weight: 600;
 `
 
-export const DashBoardCardDescription = styled.p`
+export const LinearChartDescription = styled.p`
   margin-bottom: 0.25rem;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -39,7 +40,7 @@ export const DashBoardCardDescription = styled.p`
   text-transform: uppercase;
 `
 
-export const DashBoardCardBody = styled.div`
+export const LinearChartBody = styled.div`
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1.25rem;
@@ -49,21 +50,22 @@ export const DashBoardCardBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
 `
 
-export const DashBoarCardMoneyContainer = styled.div`
+export const LineChartMoneyContainer = styled.div`
   display: flex;
   align-items: flex-start;
 `
 
-export const DashBoardCardMoney = styled.h3`
+export const LineChartMoney = styled.h3`
   margin-right: 0.5rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
 `
 
-export const DashBoardCardMoneyTag = styled.p`
+export const LineChartMoneyTag = styled.p`
   padding-left: 0.375rem;
   padding-right: 0.375rem;
   background-color: #10b981;
@@ -72,4 +74,23 @@ export const DashBoardCardMoneyTag = styled.p`
   line-height: 1.25rem;
   font-weight: 600;
   border-radius: 9999px;
+`
+
+export const LineChartNegativeMoneyTag = styled(LineChartMoneyTag)`
+  background-color: #f59e0b;
+`
+
+export const DashBoardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* max-width: 64rem; */
+  max-width: 150rem;
+  min-height: 17rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 `
