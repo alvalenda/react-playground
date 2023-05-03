@@ -1,11 +1,55 @@
 import styled from 'styled-components'
 
+export const ScreenContainer = styled.div`
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+`
+
+export const ContentArea = styled.div`
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  flex-direction: column;
+  flex: 1 1 0%;
+`
+
+export const MainContent = styled.div`
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 100%; */
+
+  @media (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+`
+
+export const DashBoardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem;
+`
+export const ChartContainer = styled.div`
+  flex-grow: 1;
+`
+
 export const DashBoardCard = styled.div`
   display: flex;
   background-color: #ffffff;
   flex-direction: column;
   border-radius: 0.125rem;
-  border-width: 1px;
+  border: 1px solid #e2e8f0;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   z-index: 2;
@@ -25,6 +69,10 @@ export const DashBoardCardHeader = styled.div`
   padding-top: 1.25rem;
 `
 
+export const LineChartHeader = styled(DashBoardCardHeader)`
+  border-bottom: 1px solid #f1f5f9;
+`
+
 export const LineChartAlignedHeader = styled.div`
   display: flex;
   padding-top: 1rem;
@@ -32,7 +80,7 @@ export const LineChartAlignedHeader = styled.div`
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   align-items: center;
-  border-bottom-width: 1px;
+  border-bottom: 1px solid #f1f5f9;
 `
 
 export const DashBoardCardTitle = styled.h2`
@@ -41,6 +89,31 @@ export const DashBoardCardTitle = styled.h2`
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 600;
+`
+
+export const BarChartTitle = styled.h2`
+  color: #1e293b;
+  font-weight: 600;
+`
+
+export const BarChartMoney = styled.div`
+  margin-right: 0.5rem;
+  font-size: 1.875rem;
+  color: #1e293b;
+  line-height: 2.25rem;
+  font-weight: 700;
+`
+
+export const PaddingContainer = styled.div`
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+`
+
+export const FlexItemsStartContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
 `
 
 export const LinearChartDescription = styled.p`
@@ -91,24 +164,6 @@ export const LineChartNegativeMoneyTag = styled(LineChartMoneyTag)`
   background-color: #f59e0b;
 `
 
-export const DashBoardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  /* max-width: 64rem; */
-  max-width: 150rem;
-  min-height: 17rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-`
-export const ChartContainer = styled.div`
-  flex-grow: 1;
-`
-
 export const LegendUL = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -130,8 +185,7 @@ export const LegendUL = styled.ul`
         height: 16px;
         border-radius: 50%;
         margin-right: 8px;
-        border-width: 3px;
-        border-color: #ffffff;
+        border: 3px solid #ffffff;
         pointer-events: none;
       }
       span.labelContainer {

@@ -1,9 +1,18 @@
 import DashboardCard08 from '@/components/Dashboard/DashBoardCard08'
+import DashboardCard09 from '@/components/Dashboard/DashBoardCard09'
 import DashboardCard01 from '@/components/Dashboard/DashboardCard01'
 import DashboardCard02 from '@/components/Dashboard/DashboardCard02'
 import DashboardCard03 from '@/components/Dashboard/DashboardCard03'
 import DashboardCard04 from '@/components/Dashboard/DashboardCard04'
-import { DashBoardContainer } from '@/components/Dashboard/styles'
+import DashboardCard05 from '@/components/Dashboard/DashboardCard05'
+import DashboardCard06 from '@/components/Dashboard/DashboardCard06'
+import DashboardCard11 from '@/components/Dashboard/DashboardCard11'
+import {
+  ContentArea,
+  DashBoardContainer,
+  MainContent,
+  ScreenContainer,
+} from '@/components/Dashboard/styles'
 import { EmotionChart } from '@/components/EmotionChart'
 import { PolarChart } from '@/components/EmotionChart/PolarChart'
 import { Footer } from '@/components/Footer'
@@ -27,19 +36,29 @@ export function LoginPage({}: Props) {
 
   return (
     <>
-      <ScreenWrapper>
-        {/* <Header /> */}
-        {/* <EmotionChart record={{ bsi: 45, ham_a: 60, ham_d: 30, k10: 15 }} /> */}
-        <DashBoardContainer>
-          <DashboardCard01 />
-          <DashboardCard02 />
-          <DashboardCard03 />
-          <DashboardCard04 />
-        </DashBoardContainer>
-        {/* <PolarChart /> */}
+      <ScreenContainer>
+        <ContentArea>
+          <MainContent>
+            {/* <Header /> */}
+            {/* <EmotionChart record={{ bsi: 45, ham_a: 60, ham_d: 30, k10: 15 }} /> */}
+            <DashBoardContainer>
+              <DashboardCard01 />
+              <DashboardCard02 />
+              <DashboardCard03 />
+              <DashboardCard04 />
 
-        {/* <Footer /> */}
-      </ScreenWrapper>
+              <DashboardCard09 />
+              <DashboardCard11 />
+              <DashboardCard06 />
+              <DashboardCard05 />
+              {/* <DashboardCard08 /> */}
+            </DashBoardContainer>
+            {/* <PolarChart /> */}
+
+            {/* <Footer /> */}
+          </MainContent>
+        </ContentArea>
+      </ScreenContainer>
     </>
   )
 }

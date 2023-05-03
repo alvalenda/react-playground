@@ -22,7 +22,7 @@ Chart.register(
   Tooltip
 )
 
-function LineChart01({ data, width, height }: LineChartProps) {
+function LineChart01({ data, width, height }: ChartProps) {
   const canvas = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {

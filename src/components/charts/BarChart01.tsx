@@ -26,7 +26,7 @@ Chart.register(
   Legend
 )
 
-function BarChart01({ data, width, height }: LineChartProps) {
+function BarChart01({ data, width, height }: ChartProps) {
   const canvas = useRef(null)
   const legend = useRef(null)
 

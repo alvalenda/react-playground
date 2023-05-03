@@ -1,12 +1,10 @@
 import BarChart from '../charts/BarChart01'
 import {
+  BarChartTitle,
   ChartContainer,
   DashBoardCard,
-  DashBoardCardHeader,
-  DashBoardCardTitle,
+  LineChartAlignedHeader,
 } from './styles'
-
-// Import utilities
 
 function DashboardCard04() {
   const chartData = {
@@ -42,9 +40,9 @@ function DashboardCard04() {
 
   return (
     <DashBoardCard>
-      <DashBoardCardHeader>
-        <DashBoardCardTitle>Direto vs Indireto</DashBoardCardTitle>
-      </DashBoardCardHeader>
+      <LineChartAlignedHeader>
+        <BarChartTitle>Direto vs Indireto</BarChartTitle>
+      </LineChartAlignedHeader>
 
       <ChartContainer>
         <BarChart data={chartData} width={595} height={248} />
