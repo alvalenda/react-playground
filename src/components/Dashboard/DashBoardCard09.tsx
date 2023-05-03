@@ -6,6 +6,7 @@ import {
   DashBoardCard,
   FlexItemsStartContainer,
   LineChartAlignedHeader,
+  LineChartHeader,
   LineChartNegativeMoneyTag,
   PaddingContainer,
 } from './styles'
