@@ -23,7 +23,7 @@ Chart.register(
   Tooltip
 )
 
-function LineChart02({ data, width, height }: LineChartProps) {
+function LineChart02({ data, width, height }: ChartProps) {
   const canvas = useRef(null)
   const legend = useRef(null)
 

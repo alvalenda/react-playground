@@ -20,7 +20,7 @@ Chart.register(
   Legend
 )
 
-function BarChart02({ data, width, height }: LineChartProps) {
+function BarChart02({ data, width, height }: ChartProps) {
   const canvas = useRef(null)
 
   useEffect(() => {
