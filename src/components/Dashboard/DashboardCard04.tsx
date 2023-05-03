@@ -4,10 +4,7 @@ import {
   ChartContainer,
   DashBoardCard,
   LineChartAlignedHeader,
-  LineChartHeader,
 } from './styles'
-
-// Import utilities
 
 function DashboardCard04() {
   const chartData = {
