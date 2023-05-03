@@ -3,7 +3,8 @@ import {
   BarChartTitle,
   ChartContainer,
   DashBoardCard,
-  DashBoardCardHeader,
+  LineChartAlignedHeader,
+  LineChartHeader,
 } from './styles'
 
 // Import utilities
@@ -42,9 +43,9 @@ function DashboardCard04() {
 
   return (
     <DashBoardCard>
-      <DashBoardCardHeader>
+      <LineChartAlignedHeader>
         <BarChartTitle>Direto vs Indireto</BarChartTitle>
-      </DashBoardCardHeader>
+      </LineChartAlignedHeader>
 
       <ChartContainer>
         <BarChart data={chartData} width={595} height={248} />
