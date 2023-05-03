@@ -12,6 +12,7 @@ import { Chart } from 'chart.js/auto'
 import 'chartjs-adapter-moment'
 import { formatValue } from '@/utils/Utils'
 import { ChartContainer } from '../Dashboard/styles'
+import styled from 'styled-components'
 
 Chart.register(
   LineController,
@@ -162,60 +163,17 @@ function LineChart02({ data, width, height }: ChartProps) {
 
   return (
     <>
-      <div
-        style={{
-          paddingTop: '0.75rem',
-          paddingBottom: '0.75rem',
-          paddingLeft: '1.25rem',
-          paddingRight: '1.25rem',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'flex-start' }}>
-            <div
-              style={{
-                marginRight: '0.5rem',
-                fontSize: '1.875rem',
-                lineHeight: '2.25rem',
-                fontWeight: '700',
-              }}
-            >
-              R$1,482
-            </div>
-            <div
-              style={{
-                paddingLeft: '0.375rem',
-                paddingRight: '0.375rem',
-                backgroundColor: '#F59E0B',
-                color: '#ffffff',
-                fontSize: '0.875rem',
-                lineHeight: '1.25rem',
-                fontWeight: '600',
-                borderRadius: '9999px',
-              }}
-            >
-              -22%
-            </div>
-          </div>
-          <div style={{ marginBottom: '0.25rem', marginLeft: '0.5rem' }}>
-            <ul
-              ref={legend}
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'flex-end',
-              }}
-            ></ul>
-          </div>
-        </div>
-      </div>
+      <LineChart02Header>
+        <FlexContainer>
+          <FlexItem>
+            <LineChart02Money>R$1,482</LineChart02Money>
+            <LineChart02MoneyTag>-22%</LineChart02MoneyTag>
+          </FlexItem>
+          <Margin>
+            <ChartUL ref={legend} />
+          </Margin>
+        </FlexContainer>
+      </LineChart02Header>
       <ChartContainer>
         <canvas ref={canvas} width={width} height={height}></canvas>
       </ChartContainer>
@@ -224,3 +182,48 @@ function LineChart02({ data, width, height }: ChartProps) {
 }
 
 export default LineChart02
+
+const LineChart02Header = styled.div`
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+`
+
+const LineChart02Money = styled.div`
+  margin-right: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+`
+
+const LineChart02MoneyTag = styled.div`
+  padding-left: '0.375rem';
+  padding-right: '0.375rem';
+  background-color: '#F59E0B';
+  color: '#ffffff';
+  font-size: '0.875rem';
+  line-height: '1.25rem';
+  font-weight: '600';
+  border-radius: '9999px';
+`
+const FlexContainer = styled.div`
+  display: 'flex';
+  flex-wrap: 'wrap';
+  justify-content: 'space-between';
+  align-items: 'flex-end';
+`
+const FlexItem = styled.div`
+  display: 'flex';
+  align-items: 'flex-start';
+`
+const Margin = styled.div`
+  margin-bottom: '0.25rem';
+  margin-left: '0.5rem';
+`
+
+const ChartUL = styled.ul`
+  display: 'flex';
+  flex-wrap: 'wrap';
+  justify-content: 'flex-end';
+`
