@@ -4,6 +4,7 @@ export const DashBoardCard = styled.div`
   display: flex;
   background-color: #ffffff;
   flex-direction: column;
+  flex-grow: 1;
   border-radius: 0.125rem;
   border-width: 1px;
   border-color: #e2e8f0;
