@@ -41,7 +41,7 @@ export const DashBoardContainer = styled.div`
   gap: 1.5rem;
 `
 export const ChartContainer = styled.div`
-  /* flex-grow: 1; */
+  flex-grow: 1;
 `
 
 export const DashBoardCard = styled.div`
