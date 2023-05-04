@@ -1,6 +1,50 @@
 import styled from 'styled-components'
 
 function DashboardCard07() {
+  const data = [
+    {
+      id: '0',
+      franchise: 'Franquia RJ-0189',
+      tier: 9,
+      revenue: 'R$ 293,877',
+      sales: 267,
+      sass: '41%',
+    },
+    {
+      id: '1',
+      franchise: 'Franquia SP-0256',
+      tier: 8,
+      revenue: 'R$ 238,426',
+      sales: 249,
+      sass: '38%',
+    },
+    {
+      id: '2',
+      franchise: 'Franquia BH-0036',
+      tier: 7,
+      revenue: 'R$ 192,444',
+      sales: 224,
+      sass: '35%',
+    },
+    {
+      id: '3',
+      franchise: 'Franquia VR-0240',
+      tier: 6,
+      revenue: 'R$ 175,236',
+      sales: 201,
+      sass: '33%',
+    },
+
+    {
+      id: '4',
+      franchise: 'Franquia RR-0176',
+      tier: 5,
+      revenue: 'R$ 142,034',
+      sales: 204,
+      sass: '31%',
+    },
+  ]
+
   return (
     <DashBoardContainer>
       <DashboardCardHeader>
@@ -33,110 +77,30 @@ function DashboardCard07() {
             {/* Table body */}
             <TableBody>
               {/* Row */}
-              <tr>
-                <TableTd>
-                  <FlexDiv>
-                    <TableRank>1</TableRank>
-                    <TextSlateSpecial>Franquia RJ-0189</TextSlateSpecial>
-                  </FlexDiv>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>Tier 9</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextGreen>R$ 293,877</TextGreen>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>267</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextSky>41%</TextSky>
-                </TableTd>
-              </tr>
-              {/* Row */}
-              <tr>
-                <TableTd>
-                  <FlexDiv>
-                    <TableRank>2</TableRank>
-                    <TextSlateSpecial>Franquia SP-0256</TextSlateSpecial>
-                  </FlexDiv>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>Tier 8</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextGreen>R$ 238,426</TextGreen>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>249</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextSky>38%</TextSky>
-                </TableTd>
-              </tr>
-              {/* Row */}
-              <tr>
-                <TableTd>
-                  <FlexDiv>
-                    <TableRank>3</TableRank>
-                    <TextSlateSpecial>Franquia BH-0036</TextSlateSpecial>
-                  </FlexDiv>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>Tier 7</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextGreen>R$ 192,444</TextGreen>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>224</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextSky>35%</TextSky>
-                </TableTd>
-              </tr>
-              {/* Row */}
-              <tr>
-                <TableTd>
-                  <FlexDiv>
-                    <TableRank>4</TableRank>
-                    <TextSlateSpecial>Franquia VR-0240</TextSlateSpecial>
-                  </FlexDiv>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>Tier 6</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextGreen>R$ 175,236</TextGreen>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>220</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextSky>33%</TextSky>
-                </TableTd>
-              </tr>
-              {/* Row */}
-              <tr>
-                <TableTd>
-                  <FlexDiv>
-                    <TableRank>5</TableRank>
-                    <TextSlateSpecial>Franquia RR-0176</TextSlateSpecial>
-                  </FlexDiv>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>Tier 5</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextGreen>R$ 142,034</TextGreen>
-                </TableTd>
-                <TableTd>
-                  <TextCenter>204</TextCenter>
-                </TableTd>
-                <TableTd>
-                  <TextSky>31%</TextSky>
-                </TableTd>
-              </tr>
+              {data.map((row) => {
+                return (
+                  <tr key={row.id}>
+                    <TableTd>
+                      <FlexDiv>
+                        <TableRank>{+row.id + 1}</TableRank>
+                        <TextSlateSpecial>{row.franchise}</TextSlateSpecial>
+                      </FlexDiv>
+                    </TableTd>
+                    <TableTd>
+                      <TextCenter>{row.tier}</TextCenter>
+                    </TableTd>
+                    <TableTd>
+                      <TextGreen>{row.revenue}</TextGreen>
+                    </TableTd>
+                    <TableTd>
+                      <TextCenter>{row.sales}</TextCenter>
+                    </TableTd>
+                    <TableTd>
+                      <TextSky>{row.sass}</TextSky>
+                    </TableTd>
+                  </tr>
+                )
+              })}
             </TableBody>
           </Table>
         </TableContainer>
@@ -147,7 +111,6 @@ function DashboardCard07() {
 
 export default DashboardCard07
 
-// FRANQUIAS
 const DashBoardContainer = styled.div`
   background-color: #ffffff;
   border-radius: 0.125rem;
