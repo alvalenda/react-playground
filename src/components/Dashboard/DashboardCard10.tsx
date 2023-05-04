@@ -7,7 +7,7 @@ function DashboardCard10() {
       position: 1,
       name: 'Salão Barbeiros Barbados',
       cnpj: '11.131.131/1313-11',
-      score: 58,
+      products: 8,
       income: 'R$ 52,890.66',
     },
     {
@@ -15,7 +15,7 @@ function DashboardCard10() {
       position: 2,
       name: 'E-commerce Boris Kitua',
       cnpj: '11.113.111/1111-13',
-      score: 43,
+      products: 7,
       income: 'R$ 42,767.04',
     },
     {
@@ -23,7 +23,7 @@ function DashboardCard10() {
       position: 3,
       name: 'Café do João',
       cnpj: '12.121.121/1212-12',
-      score: 39,
+      products: 7,
       income: 'R$ 41,996.00',
     },
     {
@@ -31,7 +31,7 @@ function DashboardCard10() {
       position: 4,
       name: 'Restaurante Italiano',
       cnpj: '14.114.114/1141-14',
-      score: 31,
+      products: 6,
       income: 'R$ 31,220.66',
     },
     {
@@ -39,7 +39,7 @@ function DashboardCard10() {
       position: 5,
       name: 'Restaurante Japonês',
       cnpj: '15.115.115/1151-15',
-      score: 27,
+      products: 6,
       income: 'R$ 31,890.66',
     },
   ]
@@ -63,10 +63,10 @@ function DashboardCard10() {
                   <TableThText>CNPJ</TableThText>
                 </TableTh>
                 <TableTh>
-                  <TableThText>Venda</TableThText>
+                  <TableThText>Receitas</TableThText>
                 </TableTh>
                 <TableTh>
-                  <TableThText>Score</TableThText>
+                  <TableThText>Produtos</TableThText>
                 </TableTh>
               </tr>
             </TableHeader>
@@ -92,7 +92,7 @@ function DashboardCard10() {
                       <TableTextMoney>{customer.income}</TableTextMoney>
                     </TableTd>
                     <TableTd>
-                      <TableTextCenter>{customer.score}</TableTextCenter>
+                      <TableTextCenter>{customer.products}</TableTextCenter>
                     </TableTd>
                   </tr>
                 )
@@ -201,14 +201,6 @@ const TableImgContainer = styled.div`
     background-color: #ca8a04;
   }
 
-  div.n4 {
-    background-color: #f87171;
-  }
-
-  div.n5 {
-    background-color: #fca5a5;
-  }
-
   @media (min-width: 640px) {
     margin-right: 0.75rem;
   }
@@ -222,7 +214,7 @@ const TableImg = styled.div`
   width: 36px;
   height: 36px;
   color: #ffffff;
-  background-color: #affaa2;
+  background-color: #0e2439;
   font-weight: 600;
 `
 
