@@ -8,7 +8,7 @@ function DashboardCard05() {
   const [increment, setIncrement] = useState(0)
   const [range, setRange] = useState(35)
 
-  // Dummy data to be looped
+  // Dummy data
   const data = [
     57.81, 57.75, 55.48, 54.28, 53.14, 52.25, 51.04, 52.49, 55.49, 56.87, 53.73,
     56.42, 58.06, 55.62, 58.16, 55.22, 58.67, 60.18, 61.31, 63.25, 65.91, 64.44,
@@ -20,7 +20,6 @@ function DashboardCard05() {
 
   const [slicedData, setSlicedData] = useState(data.slice(0, range))
 
-  // Gerar falsas datas para o gráfico
   const generateDates = () => {
     const now = new Date()
     const dates: Date[] = []
@@ -35,7 +34,6 @@ function DashboardCard05() {
     generateDates().slice(0, range).reverse()
   )
 
-  // Fake update every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter(counter + 1)
@@ -43,7 +41,6 @@ function DashboardCard05() {
     return () => clearInterval(interval)
   }, [counter])
 
-  // Loop through data array and update
   useEffect(() => {
     setIncrement(increment + 1)
     if (increment + range < data.length) {
